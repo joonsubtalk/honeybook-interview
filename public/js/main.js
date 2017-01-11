@@ -32,3 +32,9 @@ honeybookApp.controller('homeController', function($scope, mainInfo){
         $scope.awesome = records;
     });
 });
+
+// vanilla JS
+var msnry = new Masonry( '#card-list', {
+  columnWidth: 200,
+  itemSelector: '.card'
+});

@@ -5,11 +5,14 @@
     </form>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-3">
-    <div class="card" ng-repeat="a in awesome">
+<div id="card-list" class="card-list">
+  <div class="card" ng-repeat="a in awesome">
+    <div class="card-container">
       <div class="pic">
         <img src="{{a.profile_image}}"/>
+      </div>
+      <div class="icon">
+        <img src="{{a.icon}}"/>
       </div>
       <div class="description">
         <div class="name">{{a.name}}</div>
