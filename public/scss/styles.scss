@@ -4,54 +4,52 @@ body {
   background-color: $background-color;
   font-size: 18px;
 }
-.card {
-  background-color: #fff;
-  padding: 1em;
-  width: 400px;
-  position: relative;
-  display:inline-block;
-  .card-container {
-    overflow: hidden;
-  }
-  .pic {
-    width: 264px;
-    height: 264px;
-    img{
-      width: 100%;
-      height: 100%;
+.card-list{
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  .card {
+    background-color: #fff;
+    padding: 1em;
+    width: 270px;
+    position: relative;
+    display: inline;
+    margin: .325em;
+    .card-container {
+      overflow: hidden;
     }
-  }
-  .icon {
-    position: absolute;
-    z-index: 100;
-    width: 50px;
-    height: 50px;
-    bottom: 101px;
-    img {
-      width: 100%;
-      height: 100%;
+    .pic {
+      width: 270px;
+      height: 270px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
     }
-  }
-  .description {
-    padding-top: 1em;
-    .name {
-      font-weight: bold;
-      font-size: 1em;
+    .icon {
+      position: absolute;
+      z-index: 100;
+      width: 50px;
+      height: 50px;
+      bottom: 0em;
+      left: 1em;
+      transform: translate(20%, -190%);
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
-    .title {
-      font-size: .8em;
+    .description {
+      padding-top: 2em;
+      .name {
+        font-weight: bold;
+        font-size: 1em;
+      }
+      .title {
+        font-size: .8em;
+      }
     }
   }
 }
-
-/*
-<div class="card" ng-repeat="a in awesome">
-  <div class="pic">
-    <img src="{{a.profile_image}}"/>
-  </div>
-  <div class="description">
-    <div class="name">{{a.name}}</div>
-    <div class="title">{{a.job}} | @{{a.company_name}}</div>
-  </div>
-</div>
-*/
