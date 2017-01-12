@@ -14,8 +14,26 @@ header {
 nav {
   background-color: #fff;
   width: 100%;
+  padding: 1em;
   .searchbar {
     display: flex;
+    justify-content: space-around;
+    .title {
+      width: 50%;
+      font-size: 1.75em;
+      margin-left: 1em;
+    }
+    .searchinput {
+      width: 50%;
+      position: relative;
+      text-align: right;
+      .searchicon {
+        position:absolute;
+        right: .5em;
+        bottom: 1.1em;
+        color: $gray-color;
+      }
+    }
   }
 }
 .card-list{
@@ -89,6 +107,38 @@ nav {
         .extraInfo {
           margin-top: 1em;
           visibility: hidden;
+        }
+      }
+    }
+  }
+}
+// We care about Mobile too!
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: .5em;
+  }
+  .card-list{
+    justify-content: center;
+  }
+  nav {
+    background-color: #fff;
+    width: 100%;
+    padding: 1em;
+    .searchbar {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      .title {
+        width: 100%;
+        font-size: 1.75em;
+        text-align: center;
+        margin-left: 0;
+      }
+      .searchinput {
+        width: 100%;
+        .searchicon {
+          bottom: .5em;
         }
       }
     }

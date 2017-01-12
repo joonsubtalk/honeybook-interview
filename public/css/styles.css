@@ -9,10 +9,26 @@ header {
 
 nav {
   background-color: #fff;
-  width: 100%; }
+  width: 100%;
+  padding: 1em; }
   nav .searchbar {
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    nav .searchbar .title {
+      width: 50%;
+      font-size: 1.75em;
+      margin-left: 1em; }
+    nav .searchbar .searchinput {
+      width: 50%;
+      position: relative;
+      text-align: right; }
+      nav .searchbar .searchinput .searchicon {
+        position: absolute;
+        right: .5em;
+        bottom: 1.1em;
+        color: #dcdcdc; }
 
 .card-list {
   margin: 0;
@@ -76,3 +92,31 @@ nav {
         .card-list .card .description .description-container .extraInfo {
           margin-top: 1em;
           visibility: hidden; }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: .5em; }
+  .card-list {
+    -ms-flex-pack: center;
+    justify-content: center; }
+  nav {
+    background-color: #fff;
+    width: 100%;
+    padding: 1em; }
+    nav .searchbar {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      nav .searchbar .title {
+        width: 100%;
+        font-size: 1.75em;
+        text-align: center;
+        margin-left: 0; }
+      nav .searchbar .searchinput {
+        width: 100%; }
+        nav .searchbar .searchinput .searchicon {
+          bottom: .5em; } }
