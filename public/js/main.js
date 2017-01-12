@@ -28,7 +28,16 @@ honeybookApp.factory('mainInfo', function($http) {
 
 
 honeybookApp.controller('homeController', function($scope, mainInfo){
+
     mainInfo.getRecords.then(function (records) {
-        $scope.awesome = records;
+        $scope.contactList = records;
     });
+
+    $scope.hoverIn = function(){
+        this.reveal = true;
+    };
+
+    $scope.hoverOut = function(){
+        this.reveal = false;
+    };
 });

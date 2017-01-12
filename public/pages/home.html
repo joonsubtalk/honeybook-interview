@@ -1,15 +1,42 @@
-<div id="card-list" class="card-list container">
-  <div class="card" ng-repeat="a in awesome">
-    <div class="icon">
-      <img src="{{a.icon}}"/>
-    </div>
-    <div class="card-container">
-      <div class="pic">
-        <img src="{{a.profile_image}}"/>
+<nav>
+  <div class="container searchbar">
+    <span>Contact List</span> <span>Search: <input ng-model="searchText"><button></button></span>
+  </div>
+</nav>
+<div class="container">
+  <div id="card-list" class="card-list container">
+    <!-- fake loading card to stimulate the user is getting something... kinda like fb -->
+    <div class="card" ng-hide="contactList">
+      <div class="card-container">
+        <div class="pic-loading">
+        </div>
+        <div class="description">
+          <div class="description-container">
+            <div class="name">...</div>
+            <div class="title">...</div>
+          </div>
+        </div>
       </div>
-      <div class="description">
-        <div class="name">{{a.name}}</div>
-        <div class="title">{{a.job}} | @{{a.company_name}}</div>
+    </div>
+    <!-- actually loaded card -->
+    <div class="card" ng-repeat="contact in contactList | filter:searchText" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()" ng-class="{reveal: reveal}">
+      <div class="card-container">
+        <div class="pic">
+          <img src="{{contact.profile_image}}"/>
+        </div>
+        <div class="description">
+          <div class="icon">
+            <img src="{{contact.icon}}"/>
+          </div>
+          <div class="description-container">
+            <div class="name">{{contact.name}}</div>
+            <div class="title">{{contact.job}} | @{{contact.company_name}}</div>
+            <div class="extraInfo">
+                Phone Number {{contact.phone}}<br />
+                {{contact.email}}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
