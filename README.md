@@ -14,9 +14,10 @@ Things to consider:
 3. We prefer SASS. You can also use Less.
 4. Keep in mind the response times from the server will vary (0-8 seconds).
 
-How to start test environment:
-1. npm install // installs dependencies
-2. gulp // will start localhost environment
-3. enjoy!
+### How to start test environment:
+- npm install // installs dependencies
+- gulp // will start localhost environment
+- enjoy!
+- Search bar should work filtering result
 
 ![Left: Desktop; Right: Mobile](./screenshot.jpg?raw=true "Finished Look - Left: Desktop; Right: Mobile")
