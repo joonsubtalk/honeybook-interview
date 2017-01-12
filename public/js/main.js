@@ -1,5 +1,5 @@
 // module
-var honeybookApp = angular.module('honeybookApp',['ngRoute','ngResource']);
+var honeybookApp = angular.module('honeybookApp',['ngRoute']);
 
 // routes
 honeybookApp.config(function($routeProvider){
